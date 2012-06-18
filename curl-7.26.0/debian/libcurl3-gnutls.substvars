@@ -1,0 +1,2 @@
+shlibs:Depends=libc-ares2 (>= 1.8.0-1), libc6 (>= 2.7), libgcrypt11 (>= 1.4.2), libgnutls26 (>= 2.7.14-0), libidn11 (>= 1.13), libldap-2.4-2 (>= 2.4.7), zlib1g (>= 1:1.1.4)
+misc:Depends=

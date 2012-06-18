@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+
+DH_VERBOSE=1
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	./configure --enable-ares=/usr --with-gnutls=/usr --without-ssl --disable-curldebug --enable-debug --enable-ipv6 --prefix=/usr
+
+override_dh_install:
+	dh_install
+	#rm -rvf debian/libcurl3-gnutls/usr/share debian/libcurl3-gnutls/usr/bin
+
+override_dh_auto_install:
+	# GO FUCK YOURSELF BITCH
+	
+override_dh_auto_clean override_dh_auto_test override_dh_makeshlibs override_dh_installdocs override_dh_installman:
+	#nothing
